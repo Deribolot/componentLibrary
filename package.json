@@ -1,0 +1,51 @@
+{
+  "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/node": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
+    "@module-federation/typescript": "^3.1.1",
+    "@types/lodash": "^4.14.202",
+    "@types/react": "^18.2.51",
+    "@types/react-dom": "^18.2.18",
+    "@types/webpack-env": "^1.18.4",
+    "@vue/preload-webpack-plugin": "^2.0.0",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.9.1",
+    "css-minimizer-webpack-plugin": "^6.0.0",
+    "html-webpack-plugin": "^5.6.0",
+    "less": "^4.2.0",
+    "less-loader": "^12.1.0",
+    "mini-css-extract-plugin": "^2.7.7",
+    "style-loader": "^3.3.4",
+    "ts-loader": "^9.5.1",
+    "typescript-plugin-css-modules": "^5.0.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "scripts": {
+    "build": "webpack --mode development --env theme=dark",
+    "start": "webpack serve --open --mode development --env theme=dark",
+    "analyze": "webpack --profile --json > profile.json",
+    "stats": "webpack --mode development --env stats=true > stats.txt",
+    "compile": "tsc"
+  },
+  "name": "lib",
+  "version": "1.0.0",
+  "author": "Deribolot",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "classnames": "^2.5.1",
+    "lodash": "^4.17.21",
+    "normalize.css": "^8.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.3.3"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}

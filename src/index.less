@@ -1,0 +1,63 @@
+:global {
+    .main {
+        background-color: @themeColor;
+        width: 100vw;
+        height: 100vh;
+        color: @mainColor;
+        font-size: @fontSize;
+        line-height: @lineHeight;
+        font-weight: @fontWeight;
+    }
+
+    button {
+        background-color: @mainColor;
+        border: @borderWidth @themeColor solid;
+        border-radius: @borderRadius;
+        color: @themeColor;
+        outline: none;
+        padding: @padding;
+        font-weight: @buttonFontWeight;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    button.primary {
+        background-color: @primaryColor;
+        border-color: @primaryColor;
+    }
+
+    button.theme {
+        background-color: @themeColor;
+        border-color: @mainColor;
+        color: @mainColor;
+    }
+
+    .tooltipRoot {
+        position: relative;
+
+        &.withTooltip,
+        & .withTooltip {
+            &>.tooltip {
+                visibility: hidden;
+                max-width: 30vw;
+                background-color: @mainColor-transparent;
+                color: @themeColor;
+                text-align: center;
+                padding: @padding;
+                border-radius: @borderRadius;
+                position: absolute;
+                z-index: 10;
+
+                &.theme {
+                    background-color: @themeColor-transparent;
+                    color: @mainColor;
+                }
+            }
+
+            &:hover>.tooltip {
+                visibility: visible;
+            }
+        }
+    }
+}
